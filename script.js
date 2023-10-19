@@ -27,7 +27,7 @@ function writePassword() {
   passwordText.value = newPassword;
 
 } else {
-  passwordTest.value = ""; 
+  passwordText.value = ""; 
 }
 function generatePassword() {
   var password = "";
