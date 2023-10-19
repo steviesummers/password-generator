@@ -22,11 +22,8 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   if (correctPrompts) {
-
-
   var newPassword = generatePassword();
   
-
   passwordText.value = newPassword;
 
 } else {
