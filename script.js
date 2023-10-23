@@ -8,9 +8,9 @@ var lowerCase = ['a','b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'l', 'm', 'n',
 var specialChar = ['!', '@', '#', '$', '%', '^', '&', '*', '?']
 var number = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 
-var generateBtn = document.querySelector("#generate");
+var generateBtn = document.querySelector("#generate"); //these are all the potential variables for a perspective password
 
-// Add event listener to generate button
+// Add event listener to generate button //this button, when clicked, will generate the random password with all the chosen variables
 generateBtn.addEventListener("click", writePassword);
 
 
@@ -22,12 +22,12 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   if (correctPrompts) {
-  var newPassword = generatePassword();
+  var newPassword = generatePassword();      //if you select he right perameters here, a password will generate
   
   passwordText.value = newPassword;
 
 } else {
-  passwordText.value = ""; 
+  passwordText.value = ""; // if the proper perameteres are not met, the field iwll return blank
 }
 function generatePassword() {
   var password = "";
@@ -46,9 +46,9 @@ function getPrompts(){
 
   characterLegnth = [];
   
-  characterLegnth = parseInt(prompt("How many character do you want your password to be? (8 - 128"));
-  
-  if(isNaN(characterLegnth) || characterLegnth < 8 || characterLegnth > 128) {
+  characterLegnth = parseInt(prompt("How many character do you want your password to be? (8 - 128") );
+
+  if(isNaN(characterLegnth) || characterLegnth < 8 || characterLegnth > 128) {   //this alert asks how long the password needs to be
     alert("Character Legnth has to be a number, 8 - 128 digits. Please try again");
     return false;
   }
